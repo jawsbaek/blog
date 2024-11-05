@@ -3,8 +3,15 @@ title: "SK AI SUMMIT 이모 저모"
 categories:
   - ai 
 tags: 
-  - database
-  - uuid
+  - ai
+  - SK
+  - AWS
+  - Microsoft
+  - Lambda
+  - allganize
+  - penguin solutions
+  - openAI
+  - Perplexity
 ---
 11월 4일 SK AI SUMMIT 참석 후 키노트 세션, 부스 등 내용을 정리한 글입니다. 오전에는 주로 부스를 참석했고, 오후에는 두 개의 키노트 세션을 참석했습니다.
 개인적인 감상 내용을 정리한 것으로, 행사 전체의 내용을 담지 못하는 점 참고바랍니다.
@@ -111,7 +118,7 @@ AI 에 의한 에너지 소비는 2026년까지 2022년 데이터센터의 전�
 
 ### A Roadmap to Unleash the Power of GenAI and Build a Healthier Ecosystem(Kai Fu Lee)
 PC era, Mobile era, AI era로 나는 3개의 IT 시대가 있다고 본다. 현재 우리는 새로운 단계에 도달해 있다. AI era는 다시 
-1. proudctivity
+1. productivity
 2. search
 3. Entertain
 4. Social
