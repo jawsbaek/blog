@@ -15,7 +15,6 @@ tags:
 2. 소량의 기술 지원금
 
 로드밸런서나 다른 클라우드 자원이 없는 상황에서, VM 하나에만 환경을 구축할 경우 scailing이나 확장성은 물론 유지보수에서도 문제가 생긴다. 따라서, 실제 운영환경은 다른 클라우드의 클라우드 자원으로의 이전을 고려하고 빠르게 이전할 수 있는 아키텍처를 설계했다.
- <img src="../../assets/images/2024-11-29-caringnote-architecture/caringnote-architecture.png" width="100%" height="50%">
 1. 가장 큰 VM 사용
 2. Kubeadm으로 kube cluster 형성
 3. Github에서는 Action을 통해 build 후 docker hub에 push
