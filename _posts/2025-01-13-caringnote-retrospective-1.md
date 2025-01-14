@@ -25,7 +25,7 @@ tags:
 - 백엔드 Springboot, Spring JPA, Spring Security
 - 프론트엔드 Vite + React, Tailwind CSS
 - 배포 Kubernetes, Git Action, Ingress nginx
-- 
+  
   이 일정이 완료 되었을 때, 우리는 릴리즈 1까지 4주의 시간을 가지고 있었다. 이 문장을 보자마자 누군가는 느끼겠지만, 첫 릴리즈에 4주?라고 생각할 수도 있겠다.
   그러나 우리는 딜레이를 상정하고 기한을 먼저 해두기로 했다.
 
