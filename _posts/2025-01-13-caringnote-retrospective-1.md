@@ -1,5 +1,6 @@
 ---
 title: '케어링 노트 팀 회고-1: 개발팀에 생긴 문제와 변화'
+classes: wide
 categories: development
 tags:
   - Teamwork
