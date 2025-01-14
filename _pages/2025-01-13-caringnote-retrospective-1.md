@@ -4,7 +4,6 @@ categories: development
 tags:
   - Teamwork
   - Communication
-author: sjaws.baek
 ---
 
 케어링노트 프로젝트가 중반에 왔다. 우리는 디자인의 30%정도를 달성하였으며, 원래 기한의 4주를 딜레이 했다.
