@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: single
 title: "2025년 회고: 엔터프라이즈의 안정성과 스타트업의 속도, 그 사이에서"
 subtitle: "하이브리드 프로덕트-플랫폼 아키텍트로의 진화를 꿈꾸며"
 date: 2025-12-03
 categories: [Retrospective, Career, Engineering]
-tags: [Review, 2025, Growth, Product Engineer, Platform Engineer, FinOps, IAM]
+tags: [Review, "2025", Growth, Product Engineer, Platform Engineer, FinOps, IAM]
 author: jawsbaek
 ---
 
