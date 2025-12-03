@@ -72,3 +72,4 @@ SCP(Samsung Cloud Platform)의 IAM을 다루며 멀티 테넌시(Multi-Tenancy) 
 상어는 멈추면 가라앉습니다. 하지만 이제는 무작정 빨리 헤엄치는 것이 아니라, 더 넓은 시야로 더 큰 흐름을 타는 법을 배웠습니다. 2026년, 더 큰 파도를 기대해 봅니다.
 
 ---
+*If you are interested in my journey or want to discuss Product Engineering & Cloud Security, feel free to connect!*
