@@ -1,12 +1,10 @@
 ---
+layout: single
 title: "OpenClaw로 멀티 에이전트 운영 자동화 시스템 구축하기"
-categories: development
-tags:
-  - OpenClaw
-  - Multi-Agent
-  - DevOps
-  - SRE
-  - Automation
+subtitle: "AI 에이전트 4대가 협력하여 장애를 감지하고, 티켓을 만들고, 자동으로 해결하는 시스템 구축기"
+date: 2026-02-10
+categories: [Development, DevOps, AI]
+tags: [OpenClaw, Multi-Agent, SRE, Automation, SigNoz, Jira]
 author: jawsbaek
 ---
 
