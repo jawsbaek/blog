@@ -1,9 +1,14 @@
 ---
+layout: fermented
 title: "성공하고 싶습니다. 저에게 필요한 것은 더 좋은 회복탄력성입니다."
 date: 2026-02-20
 categories: [Essay]
 tags: [resilience, success, mindset, Jensen Huang]
 description: 실패에 익숙해져야 합니다.
+pair: resilience
+version: raw
+feed: false
+sitemap: false
 ---
 
 Claude로 무언가를 만들다가 싫증이 나서 멈추었습니다. 면접을 보고 원서를 내다가 떨어지는 경험들 속에서 죄절하고 힘들어하고 아무것도 하지 않는 날들이 생겼습니다. 

@@ -4,10 +4,6 @@ search: false
 ---
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/default"; // skin
-@import "minimal-mistakes"; // main p
-
-// Font 변경
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 $serif              : "Inconsolata", monospace, "PT Serif", Georgia, Times, serif;
 $sans-serif-narrow  : "Inconsolata", monospace, "PT Sans Narrow", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
@@ -15,6 +11,10 @@ $sans-serif-narrow  : "Inconsolata", monospace, "PT Sans Narrow", -apple-system,
 $global-font-family : $serif;
 $header-font-family : $sans-serif-narrow;
 $caption-font-family: $serif !default;
+
+@import "minimal-mistakes/skins/default"; // skin
+@import "minimal-mistakes"; // main partials
+@import "fermented";
 
 html {
     font-size: 12px; // originally 16px

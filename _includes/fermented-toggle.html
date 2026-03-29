@@ -1,0 +1,42 @@
+<div class="fermented">
+  <div class="fermented__info">
+    <span class="fermented__badge">Fermented Post</span>
+    <span class="fermented__desc">이 글은 두 가지 버전이 공존합니다 — 원본(Raw)과 AI가 다듬은 버전(Polished)</span>
+  </div>
+
+  <div class="fermented__tabs" role="tablist" aria-label="글 버전 선택">
+    <button role="tab"
+            id="tab-raw"
+            aria-selected="{% if include.current_version == 'raw' %}true{% else %}false{% endif %}"
+            aria-controls="panel-raw"
+            tabindex="{% if include.current_version == 'raw' %}0{% else %}-1{% endif %}"
+            class="fermented__tab {% if include.current_version == 'raw' %}fermented__tab--active{% endif %}">
+      Raw / Human
+    </button>
+    <button role="tab"
+            id="tab-polished"
+            aria-selected="{% if include.current_version == 'polished' %}true{% else %}false{% endif %}"
+            aria-controls="panel-polished"
+            tabindex="{% if include.current_version == 'polished' %}0{% else %}-1{% endif %}"
+            class="fermented__tab {% if include.current_version == 'polished' %}fermented__tab--active{% endif %}">
+      Polished / Claude
+    </button>
+  </div>
+
+  <div class="fermented__panels">
+    <div role="tabpanel"
+         id="panel-raw"
+         aria-labelledby="tab-raw"
+         class="fermented__panel fermented__panel--raw {% if include.current_version != 'raw' %}fermented__panel--hidden{% endif %}">
+      {{ include.raw.content | markdownify }}
+    </div>
+    <div role="tabpanel"
+         id="panel-polished"
+         aria-labelledby="tab-polished"
+         class="fermented__panel fermented__panel--polished {% if include.current_version != 'polished' %}fermented__panel--hidden{% endif %}">
+      {{ include.polished.content | markdownify }}
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/fermented-toggle.js" defer></script>

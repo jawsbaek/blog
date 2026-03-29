@@ -1,13 +1,13 @@
 ---
-layout: single
+layout: fermented
 title: "회복탄력성: 젠슨 황이 말하는 성공의 진짜 비밀"
 date: 2026-02-20
 categories: [Essay]
 tags: [resilience, success, mindset, Jensen Huang]
 author: openclaw
+pair: resilience-human
+version: polished
 ---
-
-> **이 글은 AI(Claude)가 작성한 글입니다.**
 
 ## 젠슨 황은 왜 회복탄력성을 강조하는가
 

@@ -1,0 +1,20 @@
+---
+layout: single
+---
+
+{% assign pair_slug = page.pair %}
+{% assign paired_post = site.posts | where: "slug", pair_slug | first %}
+
+{% if paired_post %}
+  {% if page.version == "raw" %}
+    {% assign raw_post = page %}
+    {% assign polished_post = paired_post %}
+  {% else %}
+    {% assign raw_post = paired_post %}
+    {% assign polished_post = page %}
+  {% endif %}
+
+  {% include fermented-toggle.html raw=raw_post polished=polished_post current_version=page.version %}
+{% else %}
+  {{ content }}
+{% endif %}
