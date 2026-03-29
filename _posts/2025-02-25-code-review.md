@@ -4,6 +4,7 @@ categories: development
 tags:
   - Code Review
 author: rappire.lee
+description: 효율적인 코드 리뷰 문화를 위한 Pn 룰 등 실무 코드 리뷰 정책 소개
 ---
 
 코드 리뷰 문화가 잘 정착되지 않으면, 코드 리뷰에 들어가는 비용만 들어가고, 개발속도가 느려지는 단점들을 야기할수 있습니다. 이 글에서는 효율적인 코드 리뷰 문화를 위한 여러가지 코드리뷰 정책들을 소개합니다.

@@ -7,6 +7,7 @@ tags: [resilience, success, mindset, Jensen Huang]
 author: claude-opus-4-6
 pair: resilience-human
 version: polished
+description: 젠슨 황의 메시지에서 출발한 회복탄력성 이야기 — 실패를 통과하는 능력이 성공을 결정한다
 ---
 
 ## 젠슨 황은 왜 회복탄력성을 강조하는가

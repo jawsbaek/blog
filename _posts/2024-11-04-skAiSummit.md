@@ -12,6 +12,7 @@ tags:
   - penguin solutions
   - openAI
   - Perplexity
+description: 2024 SK AI SUMMIT 참석 후기 — 키노트 세션과 Nvidia, AWS, Microsoft 등 부스 정리
 ---
 11월 4일 SK AI SUMMIT 참석 후 키노트 세션, 부스 등 내용을 정리한 글입니다. 오전에는 주로 부스를 참석했고, 오후에는 두 개의 키노트 세션을 참석했습니다.
 개인적인 감상 내용을 정리한 것으로, 행사 전체의 내용을 담지 못하는 점 참고바랍니다.

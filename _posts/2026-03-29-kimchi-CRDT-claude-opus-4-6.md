@@ -15,6 +15,7 @@ pair: kimchi-CRDT
 version: polished
 feed: false
 sitemap: false
+description: AI와 협업하며 인지 범위를 넘어 새로운 개념을 만들어낸 김치-CRDT 메타포 이야기
 ---
 
 ## 내 인지 범위를 벗어나고 싶었다

@@ -17,7 +17,6 @@ title: Sanghoon Baek`s blog
 email: bshjaws1@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   물리학과를 졸업하고 프로그래머를 하고 있는 백상훈입니다~
-twitter_username: username
 github_username: jawsbaek
 minimal_mistakes_skin: default
 search: true
@@ -29,7 +28,7 @@ theme: minimal-mistakes-jekyll
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul
 
 include:
   - _pages
@@ -60,30 +59,15 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "My awesome biography constrained to a sentence or two goes here."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/jawsbaek"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/jawsbaek"
 
 defaults:
   # _posts

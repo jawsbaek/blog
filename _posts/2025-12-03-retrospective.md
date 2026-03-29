@@ -6,6 +6,7 @@ date: 2025-12-03
 categories: [Retrospective, Career, Engineering]
 tags: [Review, "2025", Growth, Product Engineer, Platform Engineer, FinOps, IAM]
 author: jawsbaek
+description: 삼성 SDS 3년차와 케어링노트 사이드 프로젝트를 통해 발견한 하이브리드 아키텍트로의 성장 회고
 ---
 
 소프트웨어 엔지니어링 생태계에는 '엔터프라이즈의 안정성(Enterprise Stability)'과 '스타트업의 민첩성(Startup Agility)'이라는 두 가지 거대한 흐름이 존재합니다. 보통의 엔지니어는 커리어를 시작하며 이 중 하나의 생태계에 속하게 되고, 그곳의 DNA를 물려받습니다.

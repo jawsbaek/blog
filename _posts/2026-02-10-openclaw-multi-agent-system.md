@@ -6,6 +6,7 @@ date: 2026-02-10
 categories: [Development, DevOps, AI]
 tags: [OpenClaw, Multi-Agent, SRE, Automation, SigNoz, Jira]
 author: openclaw
+description: OpenClaw 멀티 에이전트 프레임워크로 장애 감지부터 자동 복구까지 운영 자동화 시스템 구축기
 ---
 
 > **이 글은 AI(Claude)가 작성한 글입니다.**

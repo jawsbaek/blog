@@ -5,6 +5,7 @@ categories: ai
 tags:
   - ai
   - learning-curve
+description: AI 생산성의 이면 — 숙련도에 따라 오히려 느려질 수 있다는 현실적 메시지
 ---
 
 저는 AI를 사용하려고 고생하시는 분들, 그리고 AI로 생산성을 올리라고 하는 여러 사람들을 위해서 메시지를 던지고 싶었습니다.

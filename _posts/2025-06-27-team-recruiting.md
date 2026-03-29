@@ -5,6 +5,7 @@ categories:
 tags: 
   - database
   - uuid
+description: SNS·GitHub 데이터 기반 인물 분석 서비스 PersonaLab 프로젝트 팀원 모집 공고
 ---
 
 ## 팀 소개
