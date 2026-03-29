@@ -31,14 +31,14 @@ author_profile: false
       {% if page.version == "raw" %}
         {{ content }}
       {% else %}
-        {{ paired_post.content }}
+        {{ paired_post.content | markdownify }}
       {% endif %}
     </div>
     <div role="tabpanel" id="panel-polished" aria-labelledby="tab-polished" class="fermented__panel fermented__panel--polished {% if page.version != 'polished' %}fermented__panel--hidden{% endif %}">
       {% if page.version == "polished" %}
         {{ content }}
       {% else %}
-        {{ paired_post.content }}
+        {{ paired_post.content | markdownify }}
       {% endif %}
     </div>
   </div>
