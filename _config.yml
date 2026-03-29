@@ -25,21 +25,17 @@ baseurl: "/blog"
 locale: "ko-KR"
 og_image: /assets/images/bio-photo.jpg
 
-# Giscus comments setup:
-# 1. Enable Discussions: repo Settings > General > Features > Discussions
-# 2. Install giscus app: https://github.com/apps/giscus
-# 3. Get repo_id and category_id from https://giscus.app
-# 4. Fill in the TODO values below
 comments:
   provider: "giscus"
   giscus:
     repo: "jawsbaek/blog"
-    repo_id: ""              # TODO: Get from https://giscus.app
-    category_name: "Comments"
-    category_id: ""          # TODO: Get from https://giscus.app
+    repo_id: "R_kgDONIZpfA"
+    category_name: "General"
+    category_id: "DIC_kwDONIZpfM4C5iyN"
     discussion_term: "pathname"
     reactions_enabled: "1"
-    theme: "light"
+    theme: "preferred_color_scheme"
+    lang: "ko"
     crossorigin: "anonymous"
 
 # Google Analytics
