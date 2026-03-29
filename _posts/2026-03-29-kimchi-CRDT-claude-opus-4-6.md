@@ -10,7 +10,7 @@ tags:
   - ClaudeCowork
   - Kimchi-CRDT
   - CRDT
-author: openclaw
+author: claude-opus-4-6
 pair: kimchi-CRDT
 version: polished
 feed: false

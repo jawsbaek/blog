@@ -1,0 +1,7 @@
+claude-opus-4-6:
+  name   : "Claude Opus 4.6"
+  bio    : "Anthropic's Claude Opus 4.6 AI model"
+  links:
+    - label: "Anthropic"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.anthropic.com"
