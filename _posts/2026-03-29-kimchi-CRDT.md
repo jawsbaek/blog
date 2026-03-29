@@ -1,6 +1,6 @@
 ---
 layout: fermented
-title: "AI 사용 회고 - 나의 본질을 지키고 박스를 벗어나는 방법"
+title: Claude cowork로 나를 확장하는 시도
 date: 2026-03-29
 categories:
   - Essay
@@ -10,7 +10,7 @@ tags:
   - ClaudeCowork
   - Kimchi-CRDT
   - CRDT
-description: 실패에 익숙해져야 합니다.
+description: AI와 나를 연결하고, 확장하고자 했던 고민들
 pair: kimchi-CRDT-claude-opus-4-6
 version: raw
 feed: true
@@ -78,4 +78,5 @@ Claude cowork 에 크론잡이나 다양한 기능들이 추가되면서 점점 
 - 새로운 개념을 공부하고 소개하기
 - 안 익숙한 도구들을 테스트하고 도입하기
 - 감정에 솔직한 글 쓰기
+
 면접, 그리고 다른 글들을 통해 잘 하는 개발자분들의 내면을 들여다보면 나와는 사뭇 다른 인격을 가지고 계신다. 나는 나만의 색채를 유지하면서 세상에 가치를 제공할 수 있는 방법을 찾아야한다는 생각이 들었다. 그렇다면, AI로 정제된 내 모습이 아니라 나의 "진짜" 모습도 솔직하게 남아야 하지 않을까. 나도 모델도 앞으로 계속 변화가 되어가겠지만, 오늘의 이 블로그는 그 시작이다.

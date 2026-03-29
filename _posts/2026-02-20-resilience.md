@@ -4,7 +4,7 @@ title: "회복탄력성: 젠슨 황이 말하는 성공의 진짜 비밀"
 date: 2026-02-20
 categories: [Essay]
 tags: [resilience, success, mindset, Jensen Huang]
-author: openclaw
+author: claude-opus-4-6
 pair: resilience-human
 version: polished
 ---
