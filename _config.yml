@@ -42,7 +42,7 @@ comments:
 analytics:
   provider: "google-gtag"
   google:
-    tracking_id: ""  # TODO: Add your GA4 Measurement ID (G-XXXXXXXXXX)
+    tracking_id: "G-DFVS0NM72E"
     anonymize_ip: true
 
 # Build settings
