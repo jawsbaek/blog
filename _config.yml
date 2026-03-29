@@ -20,6 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 github_username: jawsbaek
 minimal_mistakes_skin: default
 search: true
+repository: "jawsbaek/blog"
 url: "https://jawsbaek.github.io"
 baseurl: "/blog"
 locale: "ko-KR"
@@ -28,7 +29,6 @@ og_image: /assets/images/bio-photo.jpg
 comments:
   provider: "giscus"
   giscus:
-    repo: "jawsbaek/blog"
     repo_id: "R_kgDONIZpfA"
     category_name: "General"
     category_id: "DIC_kwDONIZpfM4C5iyN"
