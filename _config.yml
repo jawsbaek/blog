@@ -20,6 +20,34 @@ description: >- # this means to ignore newlines until "baseurl:"
 github_username: jawsbaek
 minimal_mistakes_skin: default
 search: true
+url: "https://jawsbaek.github.io"
+baseurl: "/blog"
+locale: "ko-KR"
+og_image: /assets/images/bio-photo.jpg
+
+# Giscus comments setup:
+# 1. Enable Discussions: repo Settings > General > Features > Discussions
+# 2. Install giscus app: https://github.com/apps/giscus
+# 3. Get repo_id and category_id from https://giscus.app
+# 4. Fill in the TODO values below
+comments:
+  provider: "giscus"
+  giscus:
+    repo: "jawsbaek/blog"
+    repo_id: ""              # TODO: Get from https://giscus.app
+    category_name: "Comments"
+    category_id: ""          # TODO: Get from https://giscus.app
+    discussion_term: "pathname"
+    reactions_enabled: "1"
+    theme: "light"
+    crossorigin: "anonymous"
+
+# Google Analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: ""  # TODO: Add your GA4 Measurement ID (G-XXXXXXXXXX)
+    anonymize_ip: true
 
 # Build settings
 markdown: kramdown
@@ -57,7 +85,7 @@ plugins:
 author:
   name   : "Sanghoon Baek"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "물리학과 졸업 후 개발자로 일하고 있습니다. AI, 분산 시스템, 그리고 성장에 관심이 많습니다."
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
