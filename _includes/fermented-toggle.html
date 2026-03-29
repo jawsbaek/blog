@@ -28,15 +28,15 @@
          id="panel-raw"
          aria-labelledby="tab-raw"
          class="fermented__panel fermented__panel--raw {% if include.current_version != 'raw' %}fermented__panel--hidden{% endif %}">
-      {{ include.raw.content | markdownify }}
+      {{ include.raw.content }}
     </div>
     <div role="tabpanel"
          id="panel-polished"
          aria-labelledby="tab-polished"
          class="fermented__panel fermented__panel--polished {% if include.current_version != 'polished' %}fermented__panel--hidden{% endif %}">
-      {{ include.polished.content | markdownify }}
+      {{ include.polished.content }}
     </div>
   </div>
 </div>
 
-<script src="/assets/js/fermented-toggle.js" defer></script>
+<script src="{{ '/assets/js/fermented-toggle.js' | relative_url }}" defer></script>

@@ -5,61 +5,85 @@
     display: flex;
     align-items: center;
     gap: 0.75em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.25em;
+    padding: 0.75em 1em;
+    background: linear-gradient(135deg, #fdf6ec 0%, #f5ede0 100%);
+    border-radius: 8px;
+    border: 1px solid #e8d5b7;
     flex-wrap: wrap;
   }
 
   &__badge {
-    display: inline-block;
-    padding: 0.2em 0.6em;
-    font-size: 0.75em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.25em 0.7em;
+    font-size: 0.7em;
     font-weight: 700;
-    border-radius: 4px;
-    background: #e8d5b7;
-    color: #5a3e1b;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background: #5a3e1b;
+    color: #fdf6ec;
     white-space: nowrap;
   }
 
   &__desc {
-    font-size: 0.8em;
-    color: #666;
+    font-size: 0.78em;
+    color: #7a6a55;
+    line-height: 1.4;
   }
 
   &__tabs {
     display: flex;
-    gap: 0;
-    border-bottom: 2px solid #e0e0e0;
+    gap: 0.25em;
     margin-bottom: 1.5em;
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 4px;
   }
 
   &__tab {
-    padding: 0.6em 1.2em;
+    flex: 1;
+    padding: 0.55em 1em;
     border: none;
-    background: none;
+    background: transparent;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 0.85em;
     font-family: inherit;
+    font-weight: 500;
     color: #666;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -2px;
-    transition: color 0.2s, border-color 0.2s;
+    transition: all 0.2s ease;
 
-    &:hover { color: #333; }
+    &:hover {
+      color: #333;
+      background: rgba(255, 255, 255, 0.5);
+    }
     &:focus-visible {
       outline: 2px solid #4a90d9;
-      outline-offset: -2px;
+      outline-offset: 1px;
     }
     &--active {
+      background: #fff;
       color: #333;
       font-weight: 600;
-      border-bottom-color: #5a3e1b;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
   }
 
   &__panel {
     &--hidden { display: none; }
-    &--raw { border-left: 3px solid #e8d5b7; padding-left: 1em; }
-    &--polished { border-left: 3px solid #b7d5e8; padding-left: 1em; }
+    &--raw {
+      border-left: 3px solid #e8d5b7;
+      padding-left: 1.25em;
+      background: linear-gradient(90deg, rgba(232, 213, 183, 0.05) 0%, transparent 30%);
+    }
+    &--polished {
+      border-left: 3px solid #b7d5e8;
+      padding-left: 1.25em;
+      background: linear-gradient(90deg, rgba(183, 213, 232, 0.05) 0%, transparent 30%);
+    }
   }
 
   @media (min-width: 1024px) {
