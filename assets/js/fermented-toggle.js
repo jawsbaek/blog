@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var tabs = tablist.querySelectorAll("[role=tab]");
   var panels = document.querySelectorAll(".fermented__panel");
+  var container = document.querySelector(".fermented__panels");
 
   function activate(tab) {
     tabs.forEach(function (t) {
@@ -15,14 +16,24 @@ document.addEventListener("DOMContentLoaded", function () {
     tab.setAttribute("tabindex", "0");
     tab.classList.add("fermented__tab--active");
 
-    var target = tab.getAttribute("aria-controls");
-    panels.forEach(function (p) {
-      if (p.id === target) {
+    var mode = tab.getAttribute("data-mode");
+
+    if (mode === "compare") {
+      container.setAttribute("data-view", "compare");
+      panels.forEach(function (p) {
         p.classList.remove("fermented__panel--hidden");
-      } else {
-        p.classList.add("fermented__panel--hidden");
-      }
-    });
+      });
+    } else {
+      container.setAttribute("data-view", "single");
+      var target = tab.getAttribute("aria-controls");
+      panels.forEach(function (p) {
+        if (p.id === target) {
+          p.classList.remove("fermented__panel--hidden");
+        } else {
+          p.classList.add("fermented__panel--hidden");
+        }
+      });
+    }
   }
 
   tabs.forEach(function (tab) {

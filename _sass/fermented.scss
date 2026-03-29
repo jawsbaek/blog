@@ -16,7 +16,6 @@
   &__badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.35em;
     padding: 0.25em 0.7em;
     font-size: 0.7em;
     font-weight: 700;
@@ -72,14 +71,12 @@
     }
   }
 
-  &__panel-label {
-    font-size: 0.75em;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #999;
-    margin-bottom: 1em;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid #eee;
+  &__panels[data-view="compare"] {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2em;
+    }
   }
 
   &__panel {
@@ -92,16 +89,5 @@
       border-left: 3px solid #b7d5e8;
       padding-left: 1.25em;
     }
-  }
-
-  @media (min-width: 1024px) {
-    &__panels {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2em;
-    }
-    &__panel--hidden { display: block; }
-    &__tabs { display: none; }
-    &__panel-label { display: block; }
   }
 }

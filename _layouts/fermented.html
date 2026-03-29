@@ -8,18 +8,43 @@ author_profile: false
 {% assign paired_post = site.posts | where: "slug", pair_slug | first %}
 
 {% if paired_post %}
-  {% if page.version == "raw" %}
-    {% assign raw_content = content %}
-    {% assign polished_content = paired_post.content %}
-  {% else %}
-    {% assign raw_content = paired_post.content %}
-    {% assign polished_content = content %}
-  {% endif %}
+<div class="fermented">
+  <div class="fermented__info">
+    <span class="fermented__badge">Fermented Post</span>
+    <span class="fermented__desc">이 글은 두 가지 버전이 공존합니다 — 원본(Raw)과 AI가 다듬은 버전(Polished)</span>
+  </div>
 
-  {% include fermented-toggle.html
-     raw_content=raw_content
-     polished_content=polished_content
-     current_version=page.version %}
+  <div class="fermented__tabs" role="tablist" aria-label="글 버전 선택">
+    <button role="tab" id="tab-raw" aria-selected="{% if page.version == 'raw' %}true{% else %}false{% endif %}" aria-controls="panel-raw" tabindex="{% if page.version == 'raw' %}0{% else %}-1{% endif %}" class="fermented__tab {% if page.version == 'raw' %}fermented__tab--active{% endif %}" data-mode="single">
+      Raw / Human
+    </button>
+    <button role="tab" id="tab-polished" aria-selected="{% if page.version == 'polished' %}true{% else %}false{% endif %}" aria-controls="panel-polished" tabindex="{% if page.version == 'polished' %}0{% else %}-1{% endif %}" class="fermented__tab {% if page.version == 'polished' %}fermented__tab--active{% endif %}" data-mode="single">
+      Polished / Claude
+    </button>
+    <button role="tab" id="tab-compare" aria-selected="false" aria-controls="panel-raw panel-polished" tabindex="-1" class="fermented__tab" data-mode="compare">
+      Compare
+    </button>
+  </div>
+
+  <div class="fermented__panels" data-view="single">
+    <div role="tabpanel" id="panel-raw" aria-labelledby="tab-raw" class="fermented__panel fermented__panel--raw {% if page.version != 'raw' %}fermented__panel--hidden{% endif %}">
+      {% if page.version == "raw" %}
+        {{ content }}
+      {% else %}
+        {{ paired_post.content }}
+      {% endif %}
+    </div>
+    <div role="tabpanel" id="panel-polished" aria-labelledby="tab-polished" class="fermented__panel fermented__panel--polished {% if page.version != 'polished' %}fermented__panel--hidden{% endif %}">
+      {% if page.version == "polished" %}
+        {{ content }}
+      {% else %}
+        {{ paired_post.content }}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/fermented-toggle.js' | relative_url }}" defer></script>
 {% else %}
   {{ content }}
 {% endif %}
