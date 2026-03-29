@@ -72,17 +72,25 @@
     }
   }
 
+  &__panel-label {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #999;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #eee;
+  }
+
   &__panel {
     &--hidden { display: none; }
     &--raw {
       border-left: 3px solid #e8d5b7;
       padding-left: 1.25em;
-      background: linear-gradient(90deg, rgba(232, 213, 183, 0.05) 0%, transparent 30%);
     }
     &--polished {
       border-left: 3px solid #b7d5e8;
       padding-left: 1.25em;
-      background: linear-gradient(90deg, rgba(183, 213, 232, 0.05) 0%, transparent 30%);
     }
   }
 
@@ -94,5 +102,6 @@
     }
     &__panel--hidden { display: block; }
     &__tabs { display: none; }
+    &__panel-label { display: block; }
   }
 }

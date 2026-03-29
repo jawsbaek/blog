@@ -28,13 +28,15 @@
          id="panel-raw"
          aria-labelledby="tab-raw"
          class="fermented__panel fermented__panel--raw {% if include.current_version != 'raw' %}fermented__panel--hidden{% endif %}">
-      {{ include.raw.content }}
+      <h3 class="fermented__panel-label">Raw / Human</h3>
+      {{ include.raw_content }}
     </div>
     <div role="tabpanel"
          id="panel-polished"
          aria-labelledby="tab-polished"
          class="fermented__panel fermented__panel--polished {% if include.current_version != 'polished' %}fermented__panel--hidden{% endif %}">
-      {{ include.polished.content }}
+      <h3 class="fermented__panel-label">Polished / Claude</h3>
+      {{ include.polished_content }}
     </div>
   </div>
 </div>
