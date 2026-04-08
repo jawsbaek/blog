@@ -1,0 +1,34 @@
+// Diagram container styles
+.diagram {
+  margin: 1.5em 0;
+  text-align: center;
+
+  // Excalidraw SVG embeds
+  &__svg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background: #fff;
+    padding: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  // Optional caption
+  &__caption {
+    margin-top: 0.5em;
+    font-size: 0.85em;
+    color: $muted-text-color;
+    font-style: italic;
+  }
+}
+
+// Mermaid diagram overrides
+.mermaid {
+  margin: 1.5em 0;
+  text-align: center;
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
