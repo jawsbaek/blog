@@ -15,6 +15,7 @@ $caption-font-family: $serif !default;
 @import "minimal-mistakes/skins/default"; // skin
 @import "minimal-mistakes"; // main partials
 @import "fermented";
+@import "diagrams";
 
 html {
     font-size: 12px; // originally 16px

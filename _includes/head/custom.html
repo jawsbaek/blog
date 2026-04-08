@@ -1,0 +1,15 @@
+{% if page.mermaid %}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: '{{ page.mermaid_theme | default: "default" }}',
+      look: '{{ page.mermaid_look | default: "classic" }}',
+      fontFamily: 'Pretendard, -apple-system, BlinkMacSystemFont, sans-serif',
+      flowchart: { useMaxWidth: true, htmlLabels: true },
+      sequence: { useMaxWidth: true }
+    });
+  });
+</script>
+{% endif %}
