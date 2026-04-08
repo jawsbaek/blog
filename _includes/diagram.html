@@ -1,0 +1,22 @@
+{% comment %}
+  Excalidraw SVG 다이어그램 임베딩
+
+  사용법:
+    {% include diagram.html file="my-diagram.svg" caption="아키텍처 다이어그램" alt="시스템 아키텍처" %}
+
+  Parameters:
+    file    - (필수) assets/diagrams/ 내 SVG 파일명
+    caption - (선택) 다이어그램 하단 캡션
+    alt     - (선택) 접근성을 위한 alt 텍스트
+{% endcomment %}
+<figure class="diagram">
+  <img
+    class="diagram__svg"
+    src="{{ '/assets/diagrams/' | append: include.file | relative_url }}"
+    alt="{{ include.alt | default: include.caption | default: 'diagram' }}"
+    loading="lazy"
+  />
+  {% if include.caption %}
+  <figcaption class="diagram__caption">{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>
