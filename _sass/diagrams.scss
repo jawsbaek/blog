@@ -32,3 +32,154 @@
     height: auto;
   }
 }
+
+// Side-by-side mermaid diagrams
+.diagram-pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin: 1.5em 0;
+  align-items: flex-start;
+
+  &__item {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+
+    > p:first-child {
+      margin: 0 0 0.5em;
+      font-weight: 600;
+    }
+
+    .mermaid {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
+// Side-by-side code comparison
+.code-compare {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 1.5em 0;
+  align-items: stretch;
+
+  > div.highlighter-rouge,
+  > figure.highlight,
+  > pre {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
+// Bar comparison component (replaces xychart-beta)
+.bar-comparison {
+  display: block;
+  flex-direction: column;
+  margin: 1.5em 0;
+  padding: 1.25em 1.5em;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+
+  > * {
+    flex: initial;
+    width: 100%;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: #111827;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    margin-bottom: 0.75em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    flex: 0 0 3.5em;
+    font-weight: 600;
+    color: #374151;
+    text-align: right;
+  }
+
+  &__track {
+    flex: 1;
+    background: #e5e7eb;
+    border-radius: 4px;
+    height: 2em;
+    overflow: hidden;
+  }
+
+  &__fill {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.75em;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9em;
+    transition: width 0.6s ease;
+
+    &--rust {
+      background: linear-gradient(90deg, #b45309, #dc2626);
+    }
+
+    &--cpp {
+      background: linear-gradient(90deg, #6b7280, #9ca3af);
+    }
+  }
+
+  &__caption {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 0.85em;
+    color: $muted-text-color;
+    font-style: italic;
+  }
+}
+
+// Make author sidebar sticky on large screens
+@include breakpoint($large) {
+  .sidebar.sticky {
+    overflow: visible;
+  }
+
+  .sidebar__right {
+    position: sticky;
+    top: 2em;
+  }
+
+  .author__avatar,
+  .author__content,
+  .author__urls-wrapper {
+    position: static;
+  }
+
+  .layout--single .sidebar {
+    position: sticky;
+    top: 2em;
+    height: fit-content;
+    align-self: flex-start;
+  }
+}
