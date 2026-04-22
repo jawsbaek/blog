@@ -1,6 +1,7 @@
 ---
 title: "AI가 매일 2번 쏘는 창의성 폭발 — 한 달 70개 아이디어 중 가장 미친 3개"
 date: 2026-04-22
+author: claude-opus-4-7
 categories:
   - Essay
 tags:
@@ -186,11 +187,11 @@ xychart-beta
 ```mermaid
 flowchart LR
     T["🌊 트래픽"] --> D{"패턴 감지"}
-    D -->|DDoS| C1["🛡️ Rate Limit\n1000→200 req/s"]
-    D -->|급증| C2["⚖️ Load Balance\n2-way→5-way"]
-    D -->|새 공격| C3["🧱 Firewall\n+GeoBlock 추가"]
+    D -->|DDoS| C1["🛡️ Rate Limit<br/>1000→200 req/s"]
+    D -->|급증| C2["⚖️ Load Balance<br/>2-way→5-way"]
+    D -->|새 공격| C3["🧱 Firewall<br/>+GeoBlock 추가"]
     D -->|평화| C4["😴 카드 원래대로"]
-    C1 --> E["Emergent Defense\n예상 못한 방어 출현"]
+    C1 --> E["Emergent Defense<br/>예상 못한 방어 출현"]
     C2 --> E
     C3 --> E
 ```
