@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="'Pretendard', 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f0f23"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- C side -->
+  <rect x="30" y="30" width="350" height="390" rx="12" fill="#2a1a1a" stroke="#553333" stroke-width="1.5"/>
+  <text x="205" y="65" text-anchor="middle" fill="#ff6666" font-size="18" font-weight="bold">C 언어의 세계</text>
+  <text x="205" y="85" text-anchor="middle" fill="#886666" font-size="12">"잃을 게 없어 보여"</text>
+
+  <!-- C code block -->
+  <rect x="55" y="105" width="300" height="80" rx="6" fill="#1a1a1a" stroke="#444" stroke-width="1"/>
+  <text x="70" y="130" fill="#66aa66" font-size="13" font-family="monospace">char* a = data;</text>
+  <text x="70" y="150" fill="#66aa66" font-size="13" font-family="monospace">char* b = a;  </text>
+  <text x="230" y="150" fill="#888888" font-size="11" font-family="monospace">// 둘 다 살아있음</text>
+  <text x="70" y="170" fill="#ff6666" font-size="13" font-family="monospace">free(a);      </text>
+  <text x="230" y="170" fill="#ff4444" font-size="11" font-family="monospace">// b는? 💀</text>
+
+  <!-- C brain state -->
+  <text x="205" y="215" text-anchor="middle" fill="#ff8888" font-size="14">🧠 개발자 심리</text>
+  <text x="205" y="240" text-anchor="middle" fill="#999" font-size="12">"a 넘겨도 a 살아있네?"</text>
+  <text x="205" y="260" text-anchor="middle" fill="#999" font-size="12">"그럼 대충 써도 되겠지"</text>
+  <text x="205" y="285" text-anchor="middle" fill="#ff6666" font-size="13">→ 방만한 공유</text>
+  <text x="205" y="310" text-anchor="middle" fill="#ff4444" font-size="13">→ use-after-free 💥</text>
+
+  <!-- C result -->
+  <rect x="80" y="330" width="250" height="40" rx="8" fill="#441111"/>
+  <text x="205" y="355" text-anchor="middle" fill="#ff6666" font-size="14" font-weight="bold">메모리 에러 탐지율: 32%</text>
+
+  <!-- Rust side -->
+  <rect x="420" y="30" width="350" height="390" rx="12" fill="#1a2a1a" stroke="#335533" stroke-width="1.5"/>
+  <text x="595" y="65" text-anchor="middle" fill="#ff8844" font-size="18" font-weight="bold">Rust의 세계</text>
+  <text x="595" y="85" text-anchor="middle" fill="#88aa66" font-size="12">"넘기면 잃는다"</text>
+
+  <!-- Rust code block -->
+  <rect x="445" y="105" width="300" height="80" rx="6" fill="#1a1a1a" stroke="#444" stroke-width="1"/>
+  <text x="460" y="130" fill="#66aa66" font-size="13" font-family="monospace">let a = data;</text>
+  <text x="460" y="150" fill="#66aa66" font-size="13" font-family="monospace">let b = a;    </text>
+  <text x="620" y="150" fill="#ffaa44" font-size="11" font-family="monospace">// a 사망 ⚰️</text>
+  <text x="460" y="170" fill="#ff6666" font-size="13" font-family="monospace">println!(a);  </text>
+  <text x="620" y="170" fill="#ff4444" font-size="11" font-family="monospace">// 컴파일 에러!</text>
+
+  <!-- Rust brain state -->
+  <text x="595" y="215" text-anchor="middle" fill="#ffaa44" font-size="14">🧠 개발자 심리</text>
+  <text x="595" y="240" text-anchor="middle" fill="#999" font-size="12">"a를 넘기면 a가 죽어..."</text>
+  <text x="595" y="260" text-anchor="middle" fill="#999" font-size="12">"정말 넘겨야 하나? 🤔"</text>
+  <text x="595" y="285" text-anchor="middle" fill="#44cc44" font-size="13">→ 2배 더 신중한 설계</text>
+  <text x="595" y="310" text-anchor="middle" fill="#44cc44" font-size="13">→ 손실 회피 넛지 작동!</text>
+
+  <!-- Rust result -->
+  <rect x="470" y="330" width="250" height="40" rx="8" fill="#113311"/>
+  <text x="595" y="355" text-anchor="middle" fill="#44ff44" font-size="14" font-weight="bold">메모리 에러 탐지율: 83%</text>
+
+  <!-- Center arrow / label -->
+  <text x="400" y="430" text-anchor="middle" fill="#ffdd44" font-size="14" font-weight="bold">Borrow Checker = 행동경제학 넛지</text>
+  <text x="400" y="445" text-anchor="middle" fill="#888" font-size="10">카너먼: "손실은 동일한 이득보다 2배 아프다"</text>
+</svg>
