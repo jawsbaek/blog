@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="'Pretendard', 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <linearGradient id="bgDeck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a"/>
+      <stop offset="100%" style="stop-color:#1a0f2e"/>
+    </linearGradient>
+    <filter id="cardGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bgDeck)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ff44ff" font-size="16" font-weight="bold">🎮 Deckbuilder eBPF — Self-Mutating Rule Deck</text>
+
+  <!-- BEFORE: Static deck -->
+  <text x="200" y="70" text-anchor="middle" fill="#ff6666" font-size="14" font-weight="bold">❌ 지금: 미리 짠 덱 (체스)</text>
+
+  <!-- Static cards -->
+  <rect x="40" y="85" width="100" height="140" rx="8" fill="#2a2020" stroke="#664444" stroke-width="2"/>
+  <text x="90" y="110" text-anchor="middle" fill="#ff8888" font-size="11" font-weight="bold">Rate Limit</text>
+  <line x1="55" y1="120" x2="125" y2="120" stroke="#664444"/>
+  <text x="90" y="145" text-anchor="middle" fill="#aaa" font-size="22">🛡️</text>
+  <text x="90" y="175" text-anchor="middle" fill="#888" font-size="10">1000 req/s</text>
+  <text x="90" y="195" text-anchor="middle" fill="#666" font-size="9">고정값</text>
+  <text x="90" y="215" text-anchor="middle" fill="#ff4444" font-size="9">3개월째 안 바뀜</text>
+
+  <rect x="155" y="85" width="100" height="140" rx="8" fill="#2a2020" stroke="#664444" stroke-width="2"/>
+  <text x="205" y="110" text-anchor="middle" fill="#ff8888" font-size="11" font-weight="bold">Load Balance</text>
+  <line x1="170" y1="120" x2="240" y2="120" stroke="#664444"/>
+  <text x="205" y="145" text-anchor="middle" fill="#aaa" font-size="22">⚖️</text>
+  <text x="205" y="175" text-anchor="middle" fill="#888" font-size="10">2-way split</text>
+  <text x="205" y="195" text-anchor="middle" fill="#666" font-size="9">고정값</text>
+  <text x="205" y="215" text-anchor="middle" fill="#ff4444" font-size="9">트래픽 무관</text>
+
+  <rect x="270" y="85" width="100" height="140" rx="8" fill="#2a2020" stroke="#664444" stroke-width="2"/>
+  <text x="320" y="110" text-anchor="middle" fill="#ff8888" font-size="11" font-weight="bold">Firewall</text>
+  <line x1="285" y1="120" x2="355" y2="120" stroke="#664444"/>
+  <text x="320" y="145" text-anchor="middle" fill="#aaa" font-size="22">🧱</text>
+  <text x="320" y="175" text-anchor="middle" fill="#888" font-size="10">DROP 10.0.0.0/8</text>
+  <text x="320" y="195" text-anchor="middle" fill="#666" font-size="9">고정값</text>
+  <text x="320" y="215" text-anchor="middle" fill="#ff4444" font-size="9">새 공격 무시</text>
+
+  <!-- Arrow -->
+  <text x="400" y="160" text-anchor="middle" fill="#ffdd44" font-size="28">→</text>
+
+  <!-- AFTER: Mutating deck -->
+  <text x="600" y="70" text-anchor="middle" fill="#44ff44" font-size="14" font-weight="bold">✅ 제안: 자기 변이 덱 (로그라이크)</text>
+
+  <!-- Mutating cards -->
+  <rect x="440" y="85" width="100" height="140" rx="8" fill="#1a2a1a" stroke="#44aa44" stroke-width="2" filter="url(#cardGlow)"/>
+  <text x="490" y="110" text-anchor="middle" fill="#44ff44" font-size="11" font-weight="bold">Rate Limit</text>
+  <line x1="455" y1="120" x2="525" y2="120" stroke="#44aa44"/>
+  <text x="490" y="145" text-anchor="middle" fill="#aaa" font-size="22">🛡️</text>
+  <text x="490" y="170" text-anchor="middle" fill="#ffaa44" font-size="10">1000→</text>
+  <text x="490" y="185" text-anchor="middle" fill="#44ff44" font-size="12" font-weight="bold">→ 200 req/s</text>
+  <text x="490" y="202" text-anchor="middle" fill="#88cc88" font-size="9">DDoS 감지!</text>
+  <text x="490" y="215" text-anchor="middle" fill="#44ff44" font-size="9">카드 텍스트 변이 ✨</text>
+
+  <rect x="555" y="85" width="100" height="140" rx="8" fill="#1a2a1a" stroke="#44aa44" stroke-width="2" filter="url(#cardGlow)"/>
+  <text x="605" y="110" text-anchor="middle" fill="#44ff44" font-size="11" font-weight="bold">Load Balance</text>
+  <line x1="570" y1="120" x2="640" y2="120" stroke="#44aa44"/>
+  <text x="605" y="145" text-anchor="middle" fill="#aaa" font-size="22">⚖️</text>
+  <text x="605" y="170" text-anchor="middle" fill="#ffaa44" font-size="10">2-way→</text>
+  <text x="605" y="185" text-anchor="middle" fill="#44ff44" font-size="12" font-weight="bold">→ 5-way</text>
+  <text x="605" y="202" text-anchor="middle" fill="#88cc88" font-size="9">트래픽 급증!</text>
+  <text x="605" y="215" text-anchor="middle" fill="#44ff44" font-size="9">자동 스플릿 ✨</text>
+
+  <rect x="670" y="85" width="100" height="140" rx="8" fill="#1a2a1a" stroke="#44aa44" stroke-width="2" filter="url(#cardGlow)"/>
+  <text x="720" y="110" text-anchor="middle" fill="#44ff44" font-size="11" font-weight="bold">Firewall+</text>
+  <line x1="685" y1="120" x2="755" y2="120" stroke="#44aa44"/>
+  <text x="720" y="145" text-anchor="middle" fill="#aaa" font-size="22">🧱</text>
+  <text x="720" y="170" text-anchor="middle" fill="#ffaa44" font-size="10">새 패턴 학습</text>
+  <text x="720" y="185" text-anchor="middle" fill="#44ff44" font-size="12" font-weight="bold">+GeoBlock</text>
+  <text x="720" y="202" text-anchor="middle" fill="#88cc88" font-size="9">신규 공격 대응!</text>
+  <text x="720" y="215" text-anchor="middle" fill="#44ff44" font-size="9">카드 체이닝 ✨</text>
+
+  <!-- Traffic as game events -->
+  <rect x="40" y="250" width="720" height="90" rx="10" fill="#1a1a2e" stroke="#444466" stroke-width="1"/>
+  <text x="400" y="275" text-anchor="middle" fill="#aaaacc" font-size="13" font-weight="bold">🌊 트래픽 = 게임 이벤트</text>
+
+  <text x="120" y="300" text-anchor="middle" fill="#ff8844" font-size="11">🔥 DDoS 웨이브</text>
+  <text x="120" y="315" text-anchor="middle" fill="#888" font-size="10">→ 방어 카드 강화</text>
+
+  <text x="320" y="300" text-anchor="middle" fill="#4488ff" font-size="11">📈 트래픽 스파이크</text>
+  <text x="320" y="315" text-anchor="middle" fill="#888" font-size="10">→ 밸런싱 카드 분할</text>
+
+  <text x="520" y="300" text-anchor="middle" fill="#ff44ff" font-size="11">🕵️ 새로운 공격 패턴</text>
+  <text x="520" y="315" text-anchor="middle" fill="#888" font-size="10">→ 새 카드 자동 생성</text>
+
+  <text x="690" y="300" text-anchor="middle" fill="#44ffaa" font-size="11">😴 평화로운 시간</text>
+  <text x="690" y="315" text-anchor="middle" fill="#888" font-size="10">→ 카드 원래대로</text>
+
+  <!-- Save point -->
+  <rect x="200" y="360" width="400" height="55" rx="10" fill="#2a1a2a" stroke="#aa44aa" stroke-width="1.5"/>
+  <text x="400" y="383" text-anchor="middle" fill="#ff88ff" font-size="13" font-weight="bold">💾 세이브 포인트 (안전장치)</text>
+  <text x="400" y="402" text-anchor="middle" fill="#999" font-size="11">변이 범위 ±30% 제한 | 변이 이력 로그 | 원클릭 롤백</text>
+
+  <!-- Bottom tagline -->
+  <text x="400" y="445" text-anchor="middle" fill="#ffdd44" font-size="13" font-weight="bold">"니 네트워크 규칙은 덱인데, 카드를 한 번도 안 바꿨어"</text>
+  <text x="400" y="465" text-anchor="middle" fill="#888" font-size="10">로그라이크 deckbuilder × eBPF = Self-Mutating Network Defense</text>
+</svg>

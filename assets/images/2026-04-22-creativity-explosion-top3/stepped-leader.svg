@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'Pretendard', 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="60%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- Cloud -->
+  <ellipse cx="400" cy="50" rx="200" ry="40" fill="#2d3561" opacity="0.8"/>
+  <text x="400" y="55" text-anchor="middle" fill="#8899aa" font-size="13" font-weight="bold">☁️ 모든 노드가 동시에 시작</text>
+
+  <!-- Ground -->
+  <rect x="0" y="430" width="800" height="70" fill="#1a3a1a" opacity="0.6"/>
+  <text x="400" y="465" text-anchor="middle" fill="#66aa66" font-size="13" font-weight="bold">🎯 Quorum (합의 도달점)</text>
+
+  <!-- Failed branches (dim) -->
+  <polyline points="400,90 350,140 320,180 280,230 250,270 230,310" stroke="#444466" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="8,4"/>
+  <polyline points="400,90 440,130 480,170 520,220 540,260 560,300" stroke="#444466" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="8,4"/>
+  <polyline points="400,90 380,150 370,200 390,260 410,310 420,350" stroke="#444466" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="8,4"/>
+  <polyline points="400,90 430,160 410,220 380,280 350,330" stroke="#444466" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="8,4"/>
+
+  <!-- Winning branch (bright lightning) -->
+  <polyline points="400,90 410,140 390,180 420,230 400,280 410,330 400,430" stroke="#ffdd44" stroke-width="4" fill="none" filter="url(#strongGlow)"/>
+  <polyline points="400,90 410,140 390,180 420,230 400,280 410,330 400,430" stroke="#ffffff" stroke-width="2" fill="none"/>
+
+  <!-- Labels for failed branches -->
+  <text x="210" y="320" fill="#666688" font-size="11" opacity="0.7">❌ 노드 A (소멸)</text>
+  <text x="550" y="310" fill="#666688" font-size="11" opacity="0.7">❌ 노드 C (소멸)</text>
+  <text x="330" y="360" fill="#666688" font-size="11" opacity="0.7">❌ 노드 D</text>
+
+  <!-- Label for winning branch -->
+  <text x="430" y="370" fill="#ffdd44" font-size="13" font-weight="bold" filter="url(#glow)">⚡ 노드 B — 첫 도달!</text>
+
+  <!-- Return stroke annotation -->
+  <path d="M 620,200 C 600,250 580,300 560,350" stroke="#ff6644" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <text x="630" y="200" fill="#ff8866" font-size="12">Return Stroke</text>
+  <text x="630" y="216" fill="#ff8866" font-size="11">에너지 100% 집중!</text>
+
+  <!-- VS comparison box -->
+  <rect x="30" y="120" width="160" height="110" rx="8" fill="#2a2a4a" stroke="#555577" stroke-width="1"/>
+  <text x="110" y="145" text-anchor="middle" fill="#ff6666" font-size="12" font-weight="bold">🏛️ Raft (선거)</text>
+  <text x="110" y="168" text-anchor="middle" fill="#999999" font-size="10">1. 후보 등록</text>
+  <text x="110" y="185" text-anchor="middle" fill="#999999" font-size="10">2. 투표 대기 150-300ms</text>
+  <text x="110" y="202" text-anchor="middle" fill="#999999" font-size="10">3. 당선자 발표</text>
+  <text x="110" y="219" text-anchor="middle" fill="#ff6666" font-size="10">⏸️ 그동안 시스템 정지</text>
+
+  <rect x="610" y="120" width="160" height="110" rx="8" fill="#2a3a2a" stroke="#557755" stroke-width="1"/>
+  <text x="690" y="145" text-anchor="middle" fill="#44ff44" font-size="12" font-weight="bold">⚡ 번개 (성장)</text>
+  <text x="690" y="168" text-anchor="middle" fill="#999999" font-size="10">1. 전원 동시 출발</text>
+  <text x="690" y="185" text-anchor="middle" fill="#999999" font-size="10">2. 첫 도달자 = 리더</text>
+  <text x="690" y="202" text-anchor="middle" fill="#999999" font-size="10">3. 나머지 자동 소멸</text>
+  <text x="690" y="219" text-anchor="middle" fill="#44ff44" font-size="10">▶️ 정지 시간 = 0</text>
+
+  <!-- Title -->
+  <text x="400" y="490" text-anchor="middle" fill="#aaaacc" font-size="11">"리더는 뽑히지 않고 자라난다"</text>
+</svg>
