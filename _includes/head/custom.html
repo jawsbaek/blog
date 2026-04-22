@@ -2,6 +2,15 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('code.language-mermaid').forEach(function (code) {
+      var pre = code.closest('pre') || code.parentElement;
+      var target = pre.parentElement && pre.parentElement.classList.contains('highlight') ? pre.parentElement : pre;
+      var wrapper = target.parentElement && target.parentElement.classList.contains('highlighter-rouge') ? target.parentElement : target;
+      var div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = code.textContent;
+      wrapper.replaceWith(div);
+    });
     mermaid.initialize({
       startOnLoad: true,
       theme: '{{ page.mermaid_theme | default: "default" }}',
