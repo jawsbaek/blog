@@ -31,3 +31,20 @@ html {
         font-size: 18px; // originally 22px
     }
 }
+
+// Custom jawsbar cursor (falls back to the system cursor if the image fails to load)
+// Hotspot 21 0 = the shark's nose tip (top apex) in the 32x32 image
+$jaws-cursor: url("/blog/assets/images/jawsbar-cursor.png") 21 0;
+
+body {
+    cursor: $jaws-cursor, auto;
+}
+
+a,
+button,
+.btn,
+[role="button"],
+input[type="submit"],
+label {
+    cursor: $jaws-cursor, pointer;
+}
