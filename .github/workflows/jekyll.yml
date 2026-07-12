@@ -1,3 +1,10 @@
+# This workflow is the ONLY supported way to deploy this site.
+#
+# GitHub Pages must be configured with Source = "GitHub Actions"
+# (Settings -> Pages, i.e. build_type: workflow). If it is set to the legacy
+# "Deploy from a branch" source, GitHub also runs its built-in `github-pages`
+# gem builder, which cannot load the `minimal-mistakes-jekyll` theme gem and
+# fails on every push ("The minimal-mistakes-jekyll theme could not be found").
 name: Deploy Jekyll site to Pages
 
 on:

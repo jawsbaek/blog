@@ -18,6 +18,20 @@ Replace sample content with your own and [configure as necessary](https://mmista
 
 ---
 
+## Deployment
+
+This site deploys through the **`Deploy Jekyll site to Pages`** GitHub Actions
+workflow (`.github/workflows/jekyll.yml`), which builds with the project
+`Gemfile` (Ruby 3.3, `minimal-mistakes-jekyll`).
+
+GitHub Pages must be configured with **Source = "GitHub Actions"**
+(Settings → Pages). Do not switch it back to "Deploy from a branch": the
+legacy `github-pages` gem builder cannot load the `minimal-mistakes-jekyll`
+theme gem, so it fails on every push and produces a red `pages build and
+deployment` check even though the Actions deploy succeeds.
+
+---
+
 ## Troubleshooting
 
 If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
