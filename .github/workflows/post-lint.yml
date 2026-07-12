@@ -47,7 +47,10 @@ jobs:
       - name: Collect changed posts
         id: changed
         run: |
-          base='${{ github.event.pull_request.base.sha }}'
+          # Diff against the merge-base with the live base branch (not the
+          # PR's pinned base.sha, which goes stale when main advances).
+          git fetch --no-tags origin "${{ github.base_ref }}"
+          base="$(git merge-base FETCH_HEAD HEAD)"
           files="$(git diff --name-only --diff-filter=ACM "$base" HEAD -- '_posts/*.md' | tr '\n' ' ')"
           echo "files=$files" >> "$GITHUB_OUTPUT"
           if [ -n "$files" ]; then
