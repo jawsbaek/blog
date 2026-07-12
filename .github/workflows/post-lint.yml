@@ -1,0 +1,70 @@
+name: Lint posts
+
+on:
+  pull_request:
+    paths:
+      - "_posts/**"
+      - "scripts/validate_posts.py"
+      - ".markdownlint-cli2.jsonc"
+      - ".github/workflows/post-lint.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "_posts/**"
+
+permissions:
+  contents: read
+
+jobs:
+  front-matter:
+    name: Front matter validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Validate all posts
+        run: python scripts/validate_posts.py
+
+  markdownlint:
+    name: Markdown lint (changed posts)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Collect changed posts
+        id: changed
+        run: |
+          # Diff against the merge-base with the live base branch (not the
+          # PR's pinned base.sha, which goes stale when main advances).
+          git fetch --no-tags origin "${{ github.base_ref }}"
+          base="$(git merge-base FETCH_HEAD HEAD)"
+          files="$(git diff --name-only --diff-filter=ACM "$base" HEAD -- '_posts/*.md' | tr '\n' ' ')"
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          if [ -n "$files" ]; then
+            echo "Changed posts: $files"
+          else
+            echo "No changed posts to lint."
+          fi
+
+      - name: Setup Node
+        if: steps.changed.outputs.files != ''
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run markdownlint on changed posts
+        if: steps.changed.outputs.files != ''
+        run: npx --yes markdownlint-cli2 ${{ steps.changed.outputs.files }}

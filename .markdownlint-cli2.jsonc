@@ -1,0 +1,26 @@
+{
+  // Lenient markdownlint ruleset tuned for a Korean-prose Jekyll blog.
+  // Prose- and HTML-hostile rules are disabled; whitespace/structure rules
+  // that keep posts clean and auto-fixable (markdownlint-cli2 --fix) stay on.
+  "config": {
+    "default": true,
+
+    "MD013": false, // line-length — Korean paragraphs are long single lines
+    "MD033": false, // inline HTML — posts embed <figure>, <div>, mermaid, etc.
+    "MD041": false, // first line heading — Jekyll front matter comes first
+    "MD025": false, // single H1 — front matter title + an in-body H1 is fine
+    "MD024": false, // duplicate headings — repeated section names are OK
+    "MD034": false, // bare URLs — allowed in casual prose
+    "MD004": false, // unordered list marker style — don't force - vs *
+    "MD007": false, // list indentation width
+    "MD029": false, // ordered list prefix style
+    "MD036": false, // emphasis used as heading
+    "MD026": false, // trailing punctuation in headings (Korean uses ?, !)
+    "MD030": false, // spaces after list markers
+    "MD060": false, // table column style
+    "MD055": false, // table row pipe style
+    "MD056": false, // table column count
+    "MD052": false, // reference links/images defined
+    "MD045": false // images should have alt text
+  }
+}
